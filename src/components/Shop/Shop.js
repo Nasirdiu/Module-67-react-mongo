@@ -9,7 +9,7 @@ import "./Shop.css";
 
 const Shop = () => {
   const [products, setProducts] = useProducts();
-  const [cart, setCart] = useCart(products);
+  const [cart, setCart] = useCart();
   const [pageCount, setPageCount] = useState(0);
   const [page, setPage] = useState(0);
   const [size, setSize] = useState(10);
@@ -63,7 +63,7 @@ const Shop = () => {
               className={page === number ? "selected" : ""}
               onClick={() => setPage(number)}
             >
-              {number}
+              {number + 1}
             </button>
           ))}
           <select onChange={(e) => setSize(e.target.value)}>
