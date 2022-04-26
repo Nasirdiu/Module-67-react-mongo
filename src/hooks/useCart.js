@@ -8,7 +8,6 @@ const useCart = () => {
     const storeCard = getStoredCart();
     const saveCart = [];
     const keys = Object.keys(storeCard);
-    console.log(keys);
     fetch(`http://localhost:5000/productByKeys`,{
       method:'POST',
       headers:{
