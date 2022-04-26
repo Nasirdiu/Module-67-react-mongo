@@ -8,13 +8,12 @@ const useCart = () => {
     const storeCard = getStoredCart();
     const saveCart = [];
     const keys = Object.keys(storeCard);
-    fetch(`http://localhost:5000/productByKeys`,{
-      method:'POST',
-      headers:{
-        'content-type':'application/json'
+    fetch(`https://fathomless-harbor-88203.herokuapp.com/productByKeys`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
       },
-      body:JSON.stringify(keys)
-     
+      body: JSON.stringify(keys),
     })
       .then((res) => res.json())
       .then((products) => {
